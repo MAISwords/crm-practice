@@ -138,4 +138,15 @@
       update_date = #{updateDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!-- 根据用户名查询用户对象 -->
+  <select id="queryUserByUserName" parameterType="string" resultType="com.xxxx.crm.vo.User">
+     select
+        <include refid="Base_Column_List" />
+     from
+        t_user
+     where
+        user_name = #{userName}
+  </select>
+
 </mapper>

@@ -6,4 +6,5 @@ import com.xxxx.crm.vo.User;
 
 public interface UserMapper extends BaseMapper<User, Integer> {
 
+    User queryUserByUserName(String userName);
 }
